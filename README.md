@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hi there! I'm Parsa Shaabani 👋
 
-## Getting Started
+## 🚀 Software & Web Developer from Iran
+Passionate developer exploring the world of code and innovation.
 
-First, run the development server:
+### 🛠️ What I Do
+I craft digital experiences that blend innovative design with robust functionality. My passion lies in building responsive, intuitive web and mobile applications that solve real-world problems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 🌟 Expertise
+- Cross-platform development
+- Responsive web design
+- Mobile app creation
+- Performance optimization
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🛠️ Technologies & Skills
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![Flutter](https://img.shields.io/badge/-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📊 GitHub Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ParsaProg&show_icons=true&theme=radical)
 
-## Learn More
+## 🌐 Connect with Me
+[![Telegram](https://img.shields.io/badge/Telegram-@Parsa__Shaabani-blue?style=flat-square&logo=telegram)](https://t.me/Parsa_Shaabani)
+[![Email](https://img.shields.io/badge/Email-parsashaabani3@gmail.com-red?style=flat-square&logo=gmail)](mailto:parsashaabani3@gmail.com)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏆 Achievements
+- Open Source Contributor
+- Tech Enthusiast
