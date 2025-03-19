@@ -108,11 +108,11 @@ export default function Home() {
               )}
             </AnimatePresence>
 
-            <div className="left-[50%] translate-x-[-50%] absolute bottom-5 flex items-center justify-center gap-x-3">
+            <div className="left-[50%] translate-x-[-50%] absolute bottom-3 flex items-center justify-center gap-x-3">
               <div
                 onClick={() => setImageIndex(0)}
                 className={`cursor-pointer hover:opacity-[0.9] transition-all duration-200 ${
-                  imageIndex === 0 ? "bg-black" : "bg-[#00000068]"
+                  imageIndex === 0 ? "bg-black" : "bg-[#0000008b]"
                 } p-[13px] rounded-md text-white m-auto`}
               >
                 <IoAccessibility size={15} />
@@ -120,7 +120,7 @@ export default function Home() {
               <div
                 onClick={() => setImageIndex(1)}
                 className={`cursor-pointer hover:opacity-[0.9] transition-all duration-200 ${
-                  imageIndex === 1 ? "bg-black" : "bg-[#00000068]"
+                  imageIndex === 1 ? "bg-black" : "bg-[#0000008b]"
                 } p-[13px] rounded-md text-white m-auto`}
               >
                 <LuCat size={15} />
