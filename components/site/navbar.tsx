@@ -39,7 +39,9 @@ export default function NavBar() {
     setThemeDialog((prev) => !prev); // Always toggle the state
   };
   return (
-    <div className="w-full border-b-[0.5px] border-b-neutral-800 text-white">
+    <div className="w-full fixed z-[999] top-0  border-b-[0.5px] bg-[#0000009f] border-b-neutral-800 text-white" style={{
+      backdropFilter: "blur(8px)",
+    }}>
       <div className="w-[80%] py-[10px] m-auto flex items-center justify-between">
         <div className="flex items-center gap-x-6">
           <Link href={"/"}>
@@ -107,9 +109,9 @@ export default function NavBar() {
                   exit={{
                     transform: "translateY(-10px) scaleY(0.9)",
                     opacity: "0",
-                    transition: { ease: "easeInOut", duration: 0.2 },
+                    transition: { ease: "easeInOut", duration: 0.1 },
                   }}
-                  transition={{ ease: "easeInOut", duration: 0.2 }}
+                  transition={{ ease: "easeInOut", duration: 0.1 }}
                   className="absolute mt-[5px] text-white text-left py-1 px-1 rounded-md bg-black border-[1.5px] border-neutral-800"
                 >
                   <section className="cursor-pointer hover:bg-[#27272A] w-[100px] px-1 py-1 rounded-sm">
