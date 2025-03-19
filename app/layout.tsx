@@ -1,6 +1,7 @@
 import "./globals.css";
 import NavBar from "../components/site/navbar";
 import { Geist } from "next/font/google";
+import Footer from "@/components/site/footer";
 
 // Configure the Poppins font
 const geist = Geist({
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body style={{background: "black"}} className={geist.className}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
