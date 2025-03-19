@@ -8,6 +8,7 @@ import { RiTelegram2Fill } from "react-icons/ri";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function NavBar() {
   const [themeDialog, setThemeDialog] = useState(false);
@@ -41,13 +42,15 @@ export default function NavBar() {
     <div className="w-full border-b-[0.5px] border-b-neutral-800 text-white">
       <div className="w-[80%] py-[10px] m-auto flex items-center justify-between">
         <div className="flex items-center gap-x-6">
-          <Image
-            src={ParsashaabaniImage}
-            alt="logo"
-            width={45}
-            height={45}
-            className="rounded-full cursor-pointer border-[1px] border-black"
-          />
+          <Link href={"/"}>
+            <Image
+              src={ParsashaabaniImage}
+              alt="logo"
+              width={45}
+              height={45}
+              className="rounded-full cursor-pointer border-[1px] border-black"
+            />
+          </Link>
           <NavBarSection pathname="/" />
           <NavBarSection pathname="Projects" />
           <NavBarSection pathname="Tools" />
@@ -92,8 +95,15 @@ export default function NavBar() {
             <AnimatePresence>
               {themeDialog && (
                 <motion.div
-                  initial={{ transform: "translateY(-10px) scaleY(0.9)", opacity: 0 }}
-                  animate={{ scale: 1, transform: "translateY(0px) scale(1)", opacity: 1 }}
+                  initial={{
+                    transform: "translateY(-10px) scaleY(0.9)",
+                    opacity: 0,
+                  }}
+                  animate={{
+                    scale: 1,
+                    transform: "translateY(0px) scale(1)",
+                    opacity: 1,
+                  }}
                   exit={{
                     transform: "translateY(-10px) scaleY(0.9)",
                     opacity: "0",
