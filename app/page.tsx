@@ -4,11 +4,29 @@ import useTitle from "./hooks/useTitle";
 import { FaGithub } from "react-icons/fa";
 import { IoAccessibility } from "react-icons/io5";
 import { LuCat } from "react-icons/lu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
+  const pathname = usePathname();
+  useEffect(() => {
+    let intervalId = undefined;
+  
+    if (pathname === "/") {
+      intervalId = setInterval(() => {
+        setImageIndex(prevIndex => prevIndex === 0 ? 1 : 0);
+      }, 10000);
+    }
+  
+    // Cleanup function
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [pathname]);
   useTitle("Home | ParsaShaabani");
   return (
     <div className="mt-[150px] m-auto text-white">
@@ -39,7 +57,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="z-20 border-t-[1px] relative border-t-neutral-700 mt-[150px] w-full max-w-[900px] m-auto">
+      <section className="z-20 border-t-[1px] relative border-t-neutral-700 mt-[150px] w-full max-w-[1100px] m-auto">
         <div className="absolute left-0 top-0 h-96 w-full -translate-y-full [background-image:radial-gradient(closest-side,rgba(123,175,224,0.12)_0%,transparent_100%)]"></div>
         <h5 className="text-[#60a5fa] text-xl mt-5">Introduction</h5>
         <h1 className="font-bold text-3xl mt-3">
@@ -47,9 +65,9 @@ export default function Home() {
         </h1>
         <section className=" w-full flex items-start justify-start gap-x-[50px] mt-10 text-justify">
           <p>
-            I&apos;m {" "}
+            I&apos;m{" "}
             <strong className="font-bold underline cursor-pointer">
-               Parsa Shaabani
+              Parsa Shaabani
             </strong>
             , a DevOps and Platform Engineering enthusiast from Fars, The Iran.
             I studied data science and Software Programming at the Vrije
@@ -67,7 +85,11 @@ export default function Home() {
             Blender and related services, aiming to improve both the user and
             developer experience.
           </p>
-          <div className="relative w-[400rem] h-[550px] rounded-lg">
+          <div
+            className={`transition-all duration-200 relative ${
+              imageIndex === 0 ? "w-[300rem]" : "w-[800rem]"
+            } h-[550px] rounded-lg`}
+          >
             <AnimatePresence>
               {imageIndex === 0 && (
                 <motion.img
@@ -100,7 +122,7 @@ export default function Home() {
                   className="absolute w-full h-[550px] rounded-lg"
                   alt="cat"
                   src={
-                    "https://hellob.art/_app/immutable/assets/root-cat.cS8tIn5J.jpg"
+                    "https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
                   }
                 />
               )}
