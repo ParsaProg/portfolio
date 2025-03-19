@@ -34,7 +34,7 @@ export default function NavBar() {
     setThemeDialog((prev) => !prev); // Always toggle the state
   };
   return (
-    <div className="w-full fixed z-[999] top-0  border-b-[0.5px] bg-[#0000009f] border-b-neutral-800 text-white" style={{
+    <div className="w-full fixed z-[999] top-0  border-b-[0.5px] bg-[#09090ba1] border-b-neutral-800 text-white" style={{
       backdropFilter: "blur(8px)",
     }}>
       <div className="w-[80%] py-[10px] m-auto flex items-center justify-between">

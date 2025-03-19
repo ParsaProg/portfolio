@@ -11,7 +11,7 @@ export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
   useTitle("Home | ParsaShaabani");
   return (
-    <div className="mt-[80px] m-auto text-white">
+    <div className="mt-[150px] m-auto text-white">
       <section className="z-50">
         <h1 className="z-50 font-bold text-[3rem] text-center">
           I made this for you
@@ -32,7 +32,7 @@ export default function Home() {
           <a
             href="https://github.com/ParsaProg"
             target="_blank"
-            className="z-50 cursor-pointer hover:bg-[#27272A] border-[1.6px] border-[#27272aa5] transition-all duration-200 bg-black px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center flex items-center justify-center gap-x-2"
+            className="z-50 cursor-pointer hover:bg-[#27272A] border-[1.5px] border-[#27272a] transition-all duration-200 bg-black px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center flex items-center justify-center gap-x-2"
           >
             <FaGithub size={20} />
             GitHub
@@ -47,7 +47,7 @@ export default function Home() {
         </h1>
         <section className=" w-full flex items-start justify-start gap-x-[50px] mt-10 text-justify">
           <p>
-            I&apos;m 
+            I&apos;m {" "}
             <strong className="font-bold underline cursor-pointer">
                Parsa Shaabani
             </strong>
@@ -67,7 +67,7 @@ export default function Home() {
             Blender and related services, aiming to improve both the user and
             developer experience.
           </p>
-          <div className="relative w-[400rem] h-[600px] rounded-lg">
+          <div className="relative w-[400rem] h-[550px] rounded-lg">
             <AnimatePresence>
               {imageIndex === 0 && (
                 <motion.img
@@ -78,10 +78,10 @@ export default function Home() {
                     transition: { duration: 0.3, ease: "easeInOut" },
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute w-full h-[600px] rounded-lg"
+                  className="absolute w-full h-[550px] rounded-lg"
                   alt="parsashaabani"
                   src={
-                    "https://hellob.art/_app/immutable/assets/root-me.ACEQWjWY.jpg"
+                    "https://github.com/ParsaProg/tecama_images/blob/main/photo_2025-02-17_21-51-13.jpg?raw=true"
                   }
                 />
               )}
@@ -97,7 +97,7 @@ export default function Home() {
                     transition: { duration: 0.3, ease: "easeInOut" },
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute w-full h-[600px] rounded-lg"
+                  className="absolute w-full h-[550px] rounded-lg"
                   alt="cat"
                   src={
                     "https://hellob.art/_app/immutable/assets/root-cat.cS8tIn5J.jpg"

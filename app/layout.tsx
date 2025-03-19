@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{background: "black"}} className={geist.className}>
+      <body style={{background: "#09090B"}} className={geist.className}>
         <NavBar />
         {children}
         <Footer />
