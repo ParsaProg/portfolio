@@ -6,16 +6,11 @@ import NavBarSection from "../ui/navbarlinksections";
 import { FaGithub } from "react-icons/fa";
 import { RiTelegram2Fill } from "react-icons/ri";
 import { AnimatePresence, motion } from "framer-motion";
-import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 export default function NavBar() {
   const [themeDialog, setThemeDialog] = useState(false);
-  const { theme, setTheme } = useTheme();
-  useEffect(() => {
-    setTheme("dark");
-  }, []);
 
   const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {

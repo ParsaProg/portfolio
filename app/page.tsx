@@ -3,10 +3,8 @@ import Link from "next/link";
 import useTitle from "./hooks/useTitle";
 import { FaGithub } from "react-icons/fa";
 import { IoAccessibility } from "react-icons/io5";
-import { IoLogoOctocat } from "react-icons/io5";
 import { LuCat } from "react-icons/lu";
 import { useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
@@ -49,9 +47,9 @@ export default function Home() {
         </h1>
         <section className=" w-full flex items-start justify-start gap-x-[50px] mt-10 text-justify">
           <p>
-            I'm{" "}
+            I&apos;m 
             <strong className="font-bold underline cursor-pointer">
-              Parsa Shaabani
+               Parsa Shaabani
             </strong>
             , a DevOps and Platform Engineering enthusiast from Fars, The Iran.
             I studied data science and Software Programming at the Vrije
