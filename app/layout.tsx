@@ -1,12 +1,12 @@
 import "./globals.css";
 import NavBar from "../components/site/navbar";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import Footer from "@/components/site/footer";
 import PageTransition from "@/components/site/PageTransition";
 import Layout from "@/components/site/PageTransition";
 
 // Configure the Poppins font
-const geist = Geist({
+const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "900"],
   style: ["normal"],
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{ background: "#09090B", overflowX: "hidden" }}
-        className={geist.className}
+        className={inter.className}
       >
         <NavBar />
         {children}
