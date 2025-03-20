@@ -7,6 +7,8 @@ import { LuCat } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
+import CatImage from "../public/IMG_20241227_163947.jpg";
+import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -103,7 +105,7 @@ export default function Home() {
                   className="absolute w-full h-[550px] rounded-lg"
                   alt="parsashaabani"
                   src={
-                    "https://github.com/ParsaProg/tecama_images/blob/main/photo_2025-02-17_21-51-13.jpg?raw=true"
+                    ParsaShaabaniImage.src
                   }
                 />
               )}
@@ -122,7 +124,7 @@ export default function Home() {
                   className="absolute w-full h-[550px] rounded-lg"
                   alt="cat"
                   src={
-                    "https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
+                    CatImage.src
                   }
                 />
               )}
