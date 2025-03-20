@@ -5,23 +5,25 @@ import { FaGithub } from "react-icons/fa";
 import { IoAccessibility } from "react-icons/io5";
 import { LuCat } from "react-icons/lu";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import CatImage from "../public/IMG_20241227_163947.jpg";
 import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 
 export default function Home() {
+
   const [imageIndex, setImageIndex] = useState(0);
   const pathname = usePathname();
   useEffect(() => {
     let intervalId = undefined;
-  
+
     if (pathname === "/") {
       intervalId = setInterval(() => {
-        setImageIndex(prevIndex => prevIndex === 0 ? 1 : 0);
+        setImageIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
       }, 10000);
     }
-  
+
     // Cleanup function
     return () => {
       if (intervalId) {
@@ -104,9 +106,7 @@ export default function Home() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="absolute w-full h-[550px] rounded-lg"
                   alt="parsashaabani"
-                  src={
-                    ParsaShaabaniImage.src
-                  }
+                  src={ParsaShaabaniImage.src}
                 />
               )}
             </AnimatePresence>
@@ -123,9 +123,7 @@ export default function Home() {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="absolute w-full h-[550px] rounded-lg"
                   alt="cat"
-                  src={
-                    CatImage.src
-                  }
+                  src={CatImage.src}
                 />
               )}
             </AnimatePresence>

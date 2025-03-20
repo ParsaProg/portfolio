@@ -8,8 +8,10 @@ import { RiTelegram2Fill } from "react-icons/ri";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 export default function NavBar() {
+  const { setTheme, systemTheme, theme } = useTheme();
   const [themeDialog, setThemeDialog] = useState(false);
 
   const menuRef = useRef<HTMLDivElement>(null);
@@ -34,9 +36,18 @@ export default function NavBar() {
     setThemeDialog((prev) => !prev); // Always toggle the state
   };
   return (
-    <div className="w-full fixed z-[999] top-0  border-b-[0.5px] bg-[#09090ba1] border-b-neutral-800 text-white" style={{
-      backdropFilter: "blur(8px)",
-    }}>
+    <div
+      className={`w-full fixed z-[999] top-0  border-b-[0.5px] ${
+        theme === "dark" ? "bg-[#09090ba1]" : "bg-[#ffffffa1]"
+      } ${
+        theme === "dark"
+          ? "border-b-neutral-800 text-white"
+          : "border-b-neutral-300 text-black"
+      } `}
+      style={{
+        backdropFilter: "blur(8px)",
+      }}
+    >
       <div className="w-[80%] py-[10px] m-auto flex items-center justify-between">
         <div className="flex items-center gap-x-6">
           <Link href={"/"}>
@@ -57,14 +68,18 @@ export default function NavBar() {
           <a
             href="https://github.com/ParsaProg"
             target="_blank"
-            className="p-2 rounded-md cursor-pointer transition-all duration-200 hover:bg-[#27272A]"
+            className={`p-2 rounded-md cursor-pointer transition-all duration-200 ${
+              theme === "dark" ? "hover:bg-[#27272A]" : "hover:bg-[#e1e1e4]"
+            }`}
           >
             <FaGithub size={20} />
           </a>
           <a
             href="https://t.me/@Parsa_Shaabani"
             target="_blank"
-            className="p-2 rounded-md cursor-pointer transition-all duration-200 hover:bg-[#27272A]"
+            className={`p-2 rounded-md cursor-pointer transition-all duration-200 ${
+              theme === "dark" ? "hover:bg-[#27272A]" : "hover:bg-[#e1e1e4]"
+            }`}
           >
             <RiTelegram2Fill size={20} />
           </a>
@@ -72,22 +87,49 @@ export default function NavBar() {
           <div className="relative" ref={menuRef}>
             <div
               onClick={handleToggleClick}
-              className="p-2 rounded-md cursor-pointer transition-all duration-200 hover:bg-[#27272A]"
+              className={`p-2 rounded-md cursor-pointer transition-all duration-200 ${
+                theme === "dark" ? "hover:bg-[#27272A]" : "hover:bg-[#e1e1e4]"
+              }`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-moon"
-              >
-                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
-              </svg>
+              {theme === "dark" ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-moon"
+                >
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-sun"
+                >
+                  <circle cx="12" cy="12" r="4" />
+                  <path d="M12 2v2" />
+                  <path d="M12 20v2" />
+                  <path d="m4.93 4.93 1.41 1.41" />
+                  <path d="m17.66 17.66 1.41 1.41" />
+                  <path d="M2 12h2" />
+                  <path d="M20 12h2" />
+                  <path d="m6.34 17.66-1.41 1.41" />
+                  <path d="m19.07 4.93-1.41 1.41" />
+                </svg>
+              )}
             </div>
             <AnimatePresence>
               {themeDialog && (
@@ -107,15 +149,49 @@ export default function NavBar() {
                     transition: { ease: "easeInOut", duration: 0.1 },
                   }}
                   transition={{ ease: "easeInOut", duration: 0.1 }}
-                  className="absolute mt-[5px] text-white text-left py-1 px-1 rounded-md bg-black border-[1.5px] border-neutral-800"
+                  className={`absolute mt-[5px] ${
+                    theme === "dark"
+                      ? "text-white bg-black border-neutral-800"
+                      : "text-black bg-white border-neutral-200"
+                  } text-left py-1 px-1 rounded-md  border-[1.5px] `}
                 >
-                  <section className="cursor-pointer hover:bg-[#27272A] w-[100px] px-1 py-1 rounded-sm">
+                  <section
+                    onClick={() => {
+                      setTheme("light");
+                      setThemeDialog(false);
+                    }}
+                    className={`cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:bg-[#27272A]"
+                        : "hover:bg-[#d6d6d9]"
+                    } w-[100px] px-1 py-1 rounded-sm text-[15px]`}
+                  >
                     Light
                   </section>
-                  <section className="cursor-pointer hover:bg-[#27272A] w-[100px] py-1 px-1 rounded-sm">
+                  <section
+                    onClick={() => {
+                      setTheme("dark");
+                      setThemeDialog(false);
+                    }}
+                    className={`cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:bg-[#27272A]"
+                        : "hover:bg-[#d6d6d9]"
+                    } w-[100px] px-1 py-1 rounded-sm text-[15px]`}
+                  >
                     Dark
                   </section>
-                  <section className="cursor-pointer hover:bg-[#27272A] w-[100px] py-1 px-1 rounded-sm">
+                  <section
+                    onClick={() => {
+                      setTheme(systemTheme || "");
+                      setThemeDialog(false);
+                    }}
+                    className={`cursor-pointer ${
+                      theme === "dark"
+                        ? "hover:bg-[#27272A]"
+                        : "hover:bg-[#d6d6d9]"
+                    } w-[100px] px-1 py-1 rounded-sm text-[15px]`}
+                  >
                     System
                   </section>
                 </motion.div>
