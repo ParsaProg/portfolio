@@ -107,7 +107,7 @@ export default function NavBar() {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://t.me/@Parsa_Shaabani"
+              href="https://t.me/Parsa_Shaabani"
               target="_blank"
               className={`p-2 rounded-md cursor-pointer transition-all duration-200 ${
                 theme === "dark" ? "hover:bg-[#27272A]" : "hover:bg-[#e1e1e4]"
