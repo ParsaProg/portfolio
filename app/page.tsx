@@ -12,9 +12,9 @@ import CatImage from "../public/IMG_20241227_163947.jpg";
 import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 
 export default function Home() {
-
   const [imageIndex, setImageIndex] = useState(0);
   const pathname = usePathname();
+  const { theme } = useTheme();
   useEffect(() => {
     let intervalId = undefined;
 
@@ -33,28 +33,36 @@ export default function Home() {
   }, [pathname]);
   useTitle("Home | ParsaShaabani");
   return (
-    <div className="mt-[150px] m-auto text-white">
+    <div
+      className={`mt-[150px] m-auto ${
+        theme === "dark" ? "text-white" : "text-black"
+      }`}
+    >
       <section className="z-50">
         <h1 className="z-50 font-bold text-[3rem] text-center">
           I made this for you
         </h1>
-        <h2 className="z-50 font-[500] text-xl text-center text-[#A1A1AA]">
+        <h2 className={`z-50 font-[400] text-xl text-center ${theme === "dark"? "text-[#c1c1cd]" : "text-[#696971]"}`}>
           Featuring current work and studies in a NextJs-based portfolio.
         </h2>
-        <p className="z-50 font-[500] text-sm text-center text-[#4ade80] mt-2">
+        <p
+          className={`z-50 font-[500] text-sm text-center ${
+            theme === "dark" ? "text-[#40c671]" : "text-[#15803d]"
+          } mt-2`}
+        >
           Inspired by others, I share my open-source derived work with the
           community.
         </p>
         <div className="z-50 flex items-center justify-center gap-x-5">
           <Link href={"/projects"} className="z-50">
-            <button className="z-50 cursor-pointer hover:bg-neutral-200 transition-all duration-100 bg-white px-3 h-[45px] mt-4 rounded-md text-black text-md font-[500] text-center">
+            <button className={`z-50 cursor-pointer  transition-all duration-100 ${theme === "dark"? "bg-white text-black hover:bg-neutral-200": "bg-black text-white hover:bg-neutral-800"} px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center`}>
               My Projects
             </button>
           </Link>
           <a
             href="https://github.com/ParsaProg"
             target="_blank"
-            className="z-50 cursor-pointer hover:bg-[#27272A] border-[1.5px] border-[#27272a] transition-all duration-200 bg-black px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center flex items-center justify-center gap-x-2"
+            className={`z-50 cursor-pointer  border-[1.5px] ${theme === "dark"? "border-[#27272a] hover:bg-[#27272A]": "border-[#babacc58] hover:bg-[#27272a2d]"} transition-all duration-200 ${theme === "dark"? "bg-black": "bg-white"} px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center flex items-center justify-center gap-x-2`}
           >
             <FaGithub size={20} />
             GitHub
