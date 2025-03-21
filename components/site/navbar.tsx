@@ -93,7 +93,7 @@ export default function NavBar() {
               alt="logo"
               width={45}
               height={45}
-              className="rounded-full cursor-pointer border-[1px] border-black"
+              className="rounded-full image-3-icons cursor-pointer border-[1px] border-black"
             />
           </Link>
           <div className="flex items-center">
