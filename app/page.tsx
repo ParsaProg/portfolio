@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import CatImage from "../public/IMG_20241227_163947.jpg";
 import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
+import "../styles/homepage_res.css";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -42,7 +43,11 @@ export default function Home() {
         <h1 className="z-50 font-bold lg:text-[3rem] md:text-[2.5rem] text-[2rem] text-center leading-[40px]">
           I made this for you
         </h1>
-        <h2 className={`z-50 mt-3 font-[400] md:text-[1.2rem] text-[1.1rem] text-xl text-center ${theme === "dark"? "text-[#c1c1cd]" : "text-[#696971]"}`}>
+        <h2
+          className={`z-50 mt-3 font-[400] md:text-[1.2rem] text-[1.1rem] text-xl text-center ${
+            theme === "dark" ? "text-[#c1c1cd]" : "text-[#696971]"
+          }`}
+        >
           Featuring current work and studies in a NextJs-based portfolio.
         </h2>
         <p
@@ -55,28 +60,40 @@ export default function Home() {
         </p>
         <div className="z-50 flex items-center justify-center gap-x-5">
           <Link href={"/projects"} className="z-50">
-            <button className={`z-50 cursor-pointer  transition-all duration-100 ${theme === "dark"? "bg-white text-black hover:bg-neutral-200": "bg-black text-white hover:bg-neutral-800"} px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center`}>
+            <button
+              className={`z-50 cursor-pointer  transition-all duration-100 ${
+                theme === "dark"
+                  ? "bg-white text-black hover:bg-neutral-200"
+                  : "bg-black text-white hover:bg-neutral-800"
+              } px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center`}
+            >
               My Projects
             </button>
           </Link>
           <a
             href="https://github.com/ParsaProg"
             target="_blank"
-            className={`z-50 cursor-pointer  border-[1.5px] ${theme === "dark"? "border-[#27272a] hover:bg-[#27272A]": "border-[#babacc58] hover:bg-[#27272a2d]"} transition-all duration-200 ${theme === "dark"? "bg-black": "bg-white"} px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center flex items-center justify-center gap-x-2`}
+            className={`z-50 cursor-pointer  border-[1.5px] ${
+              theme === "dark"
+                ? "border-[#27272a] hover:bg-[#27272A]"
+                : "border-[#babacc58] hover:bg-[#27272a2d]"
+            } transition-all duration-200 ${
+              theme === "dark" ? "bg-black" : "bg-white"
+            } px-3 h-[45px] mt-4 rounded-md text-md font-[500] text-center flex items-center justify-center gap-x-2`}
           >
             <FaGithub size={20} />
             GitHub
           </a>
         </div>
       </section>
-      <section className="z-20 border-t-[1px] relative border-t-neutral-700 md:mt-[150px] mt-[50px] w-full max-w-[1100px] m-auto">
+      <section className="z-20 main-info-section border-t-[1px] relative border-t-neutral-700 md:mt-[150px] mt-[50px]">
         <div className="absolute left-0 top-0 h-96 w-full -translate-y-full [background-image:radial-gradient(closest-side,rgba(123,175,224,0.12)_0%,transparent_100%)]"></div>
         <h5 className="text-[#60a5fa] text-xl mt-5">Introduction</h5>
         <h1 className="font-bold text-3xl mt-3">
           Programmer & Web developer & Software developer
         </h1>
-        <section className=" w-full flex items-start justify-start gap-x-[50px] mt-10 text-justify">
-          <p>
+        <section className=" w-full my-info-section flex items-start justify-start gap-x-[50px] mt-10 text-justify">
+          <p className="mb-5">
             I&apos;m{" "}
             <strong className="font-bold underline cursor-pointer">
               Parsa Shaabani
@@ -99,8 +116,8 @@ export default function Home() {
           </p>
           <div
             className={`transition-all duration-200 relative ${
-              imageIndex === 0 ? "w-[300rem]" : "w-[800rem]"
-            } h-[550px] rounded-lg`}
+              imageIndex === 0 ? "image-index-0" : "image-index-1"
+            } rounded-lg`}
           >
             <AnimatePresence>
               {imageIndex === 0 && (
@@ -112,7 +129,7 @@ export default function Home() {
                     transition: { duration: 0.3, ease: "easeInOut" },
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute w-full h-[550px] rounded-lg"
+                  className="absolute w-full main-image-index-0 rounded-lg"
                   alt="parsashaabani"
                   src={ParsaShaabaniImage.src}
                 />
@@ -129,7 +146,7 @@ export default function Home() {
                     transition: { duration: 0.3, ease: "easeInOut" },
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="absolute w-full h-[550px] rounded-lg"
+                  className="absolute w-full main-image-index-1 rounded-lg"
                   alt="cat"
                   src={CatImage.src}
                 />
