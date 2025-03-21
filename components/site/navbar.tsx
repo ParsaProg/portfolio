@@ -38,11 +38,9 @@ export default function NavBar() {
   return (
     <div
       className={`w-full fixed z-[999] top-0  border-b-[0.5px] ${
-        theme === "dark" ? "bg-[#09090ba1]" : "bg-[#ffffffa1]"
-      } ${
         theme === "dark"
-          ? "border-b-neutral-800 text-white"
-          : "border-b-neutral-300 text-black"
+          ? "bg-[#09090ba1] border-b-neutral-800 text-white"
+          : "bg-[#ffffffa1] border-b-neutral-300 text-black"
       } `}
       style={{
         backdropFilter: "blur(8px)",
