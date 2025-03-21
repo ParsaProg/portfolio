@@ -34,15 +34,15 @@ export default function Home() {
   useTitle("Home | ParsaShaabani");
   return (
     <div
-      className={`mt-[150px] m-auto ${
+      className={`lg:mt-[150px] mt-[100px] m-auto ${
         theme === "dark" ? "text-white" : "text-black"
       }`}
     >
-      <section className="z-50">
-        <h1 className="z-50 font-bold text-[3rem] text-center">
+      <section className="z-50 sm:px-0 px-2">
+        <h1 className="z-50 font-bold lg:text-[3rem] md:text-[2.5rem] text-[2rem] text-center leading-[40px]">
           I made this for you
         </h1>
-        <h2 className={`z-50 font-[400] text-xl text-center ${theme === "dark"? "text-[#c1c1cd]" : "text-[#696971]"}`}>
+        <h2 className={`z-50 mt-3 font-[400] md:text-[1.2rem] text-[1.1rem] text-xl text-center ${theme === "dark"? "text-[#c1c1cd]" : "text-[#696971]"}`}>
           Featuring current work and studies in a NextJs-based portfolio.
         </h2>
         <p
@@ -69,7 +69,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="z-20 border-t-[1px] relative border-t-neutral-700 mt-[150px] w-full max-w-[1100px] m-auto">
+      <section className="z-20 border-t-[1px] relative border-t-neutral-700 md:mt-[150px] mt-[50px] w-full max-w-[1100px] m-auto">
         <div className="absolute left-0 top-0 h-96 w-full -translate-y-full [background-image:radial-gradient(closest-side,rgba(123,175,224,0.12)_0%,transparent_100%)]"></div>
         <h5 className="text-[#60a5fa] text-xl mt-5">Introduction</h5>
         <h1 className="font-bold text-3xl mt-3">
