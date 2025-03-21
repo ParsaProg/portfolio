@@ -1,0 +1,28 @@
+.image-3-icons {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.navbar-content {
+  width: 80%;
+}
+
+@media (max-width: 620px) {
+  .left-side-navbar {
+    display: none;
+  }
+  .image-3-icons {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+    position: relative;
+  }
+  .navbar-content {
+    width: 90%;
+  }
+}
