@@ -87,13 +87,15 @@ export default function NavBar() {
           <NavBarSection pathname="TimeLine" />
         </div>
         <div className="flex items-center gap-x-6">
-          <Image
-            src={ParsashaabaniImage}
-            alt="logo"
-            width={45}
-            height={45}
-            className="rounded-full cursor-pointer border-[1px] border-black image-3-icons"
-          />
+          <Link href={"/"}>
+            <Image
+              src={ParsashaabaniImage}
+              alt="logo"
+              width={45}
+              height={45}
+              className="rounded-full cursor-pointer border-[1px] border-black"
+            />
+          </Link>
           <div className="flex items-center">
             <a
               href="https://github.com/ParsaProg"
