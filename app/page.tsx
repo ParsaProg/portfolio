@@ -3,7 +3,6 @@ import Link from "next/link";
 import useTitle from "./hooks/useTitle";
 import { FaGithub } from "react-icons/fa";
 import { IoAccessibility } from "react-icons/io5";
-import { LuCat } from "react-icons/lu";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
@@ -11,6 +10,7 @@ import { usePathname } from "next/navigation";
 import CatImage from "../public/IMG_20241227_163947.jpg";
 import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 import "../styles/homepage_res.css";
+import { MdSportsScore } from "react-icons/md";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -86,8 +86,8 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="z-20 main-info-section border-t-[1px] relative border-t-neutral-700 md:mt-[150px] mt-[50px]">
-        <div className="absolute left-0 top-0 h-96 w-full -translate-y-full [background-image:radial-gradient(closest-side,rgba(123,175,224,0.12)_0%,transparent_100%)]"></div>
+      <section className="z-20 overflow-hidden main-info-section border-t-[1px] relative border-t-neutral-700 md:mt-[150px] mt-[50px]">
+        <div className="absolute left-0 top-40 h-96 w-full -translate-y-full [background-image:radial-gradient(closest-side,rgba(123,175,224,0.12)_0%,transparent_100%)]"></div>
         <h5 className="text-[#60a5fa] text-xl mt-5">AboutMe</h5>
         <h1 className="font-bold text-3xl mt-3">
           Programmer & Web developer & Software developer
@@ -166,7 +166,7 @@ export default function Home() {
                 onClick={() => setImageIndex(0)}
                 className={`cursor-pointer hover:opacity-[0.9] transition-all duration-200 ${
                   imageIndex === 0 ? "bg-black" : "bg-[#0000008b]"
-                } p-[13px] rounded-md text-white m-auto`}
+                } p-[13px] rounded-md text-white m-auto border-[0.5px] border-[#ffffff6f]`}
               >
                 <IoAccessibility size={15} />
               </div>
@@ -174,9 +174,9 @@ export default function Home() {
                 onClick={() => setImageIndex(1)}
                 className={`cursor-pointer hover:opacity-[0.9] transition-all duration-200 ${
                   imageIndex === 1 ? "bg-black" : "bg-[#0000008b]"
-                } p-[13px] rounded-md text-white m-auto`}
+                } p-[13px] rounded-md text-white m-auto border-[0.5px] border-[#ffffff6f]`}
               >
-                <LuCat size={15} />
+                <MdSportsScore size={15} />
               </div>
             </div>
           </div>
