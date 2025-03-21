@@ -22,7 +22,7 @@ export default function Home() {
     if (pathname === "/") {
       intervalId = setInterval(() => {
         setImageIndex((prevIndex) => (prevIndex === 0 ? 1 : 0));
-      }, 10000);
+      }, 30000);
     }
 
     // Cleanup function
@@ -92,7 +92,7 @@ export default function Home() {
         <h1 className="font-bold text-3xl mt-3">
           Programmer & Web developer & Software developer
         </h1>
-        <section className=" w-full my-info-section flex items-start justify-start gap-x-[50px] mt-10 text-justify">
+        <section className=" w-full my-info-section flex items-start justify-start gap-x-[50px] md:mt-10 mt-3 text-justify">
           <p className="mb-5">
             I&apos;m{" "}
             <strong className="font-bold underline cursor-pointer">
