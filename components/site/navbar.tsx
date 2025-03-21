@@ -84,7 +84,7 @@ export default function NavBar() {
           <NavBarSection pathname="/" />
           <NavBarSection pathname="Projects" />
           <NavBarSection pathname="Tools" />
-          <NavBarSection pathname="TimeLine" />
+          <NavBarSection pathname="Timeline" />
         </div>
         <div className="flex items-center gap-x-6">
           <Link href={"/"}>
@@ -301,7 +301,7 @@ export default function NavBar() {
                       : "hover:bg-[#d6d6d9]"
                   } w-[100px] px-1 py-1 rounded-sm text-[15px]`}
                 >
-                  TimeLine
+                  Timeline
                 </Link>
               </motion.div>
             )}

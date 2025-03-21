@@ -1,14 +1,14 @@
 import "./globals.css";
 import NavBar from "../components/site/navbar";
-import { Inter } from "next/font/google";
+import { Geist } from "next/font/google";
 import Footer from "@/components/site/footer";
 import ThemeProvider from "@/components/utils/themesProvider";
 import ThemeWrapper from "./ThemeWrapper"; // Import the ThemeWrapper
 
 // Configure the Inter font
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
+  weight: ["300", "400", "500", "700"],
   style: ["normal"],
   display: "swap",
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={geist.className}>
         <ThemeProvider>
           <ThemeWrapper>
             <NavBar />
