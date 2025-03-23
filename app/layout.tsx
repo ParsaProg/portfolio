@@ -5,6 +5,7 @@ import Footer from "@/components/site/footer";
 import ThemeProvider from "@/components/utils/themesProvider";
 import ThemeWrapper from "./ThemeWrapper";
 import { Metadata } from "next";
+import favicon from "./favicon.ico";
 
 // Configure the Geist font
 const geist = Geist({
@@ -61,7 +62,7 @@ export default function RootLayout({
         />
 
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={favicon.src} />
       </head>
       <body className={geist.className}>
         <ThemeProvider>
