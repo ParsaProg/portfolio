@@ -11,6 +11,7 @@ import CatImage from "../public/IMG_20241227_163947.jpg";
 import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 import "../styles/homepage_res.css";
 import { MdSportsScore } from "react-icons/md";
+import Head from "next/head";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -39,6 +40,41 @@ export default function Home() {
         theme === "dark" ? "text-white" : "text-black"
       }`}
     >
+      <Head>
+        <title>Parsa Shaabani Portfolio</title>
+        <meta
+          name="description"
+          content="Portfolio website of Parsa Shaabani, his projects, tools and timeline. connect with him and ..."
+        />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Parsa Shaabani Portfolio" />
+        <meta
+          property="og:description"
+          content="Welcome to my world! 🚀 A space full of creative ideas, coding adventures, and tons of positive vibes! 💡 Let’s explore and build something amazing together! 🌟"
+        />
+        <meta
+          property="og:image"
+          content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
+        />
+        <meta property="og:url" content="https://yourwebsite.com" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Parsa Shaabani Portfolio"  />
+        <meta
+          name="twitter:description"
+          content="Welcome to my world! 🚀 A space full of creative ideas, coding adventures, and tons of positive vibes! 💡 Let’s explore and build something amazing together! 🌟"
+        />
+        <meta
+          name="twitter:image"
+          content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
+        />
+
+        {/* Favicon */}
+        <link rel="icon" href="./favicon.ico" />
+      </Head>
       <section className="z-50 sm:px-0 px-2">
         <h1 className="z-50 font-bold lg:text-[3rem] md:text-[2.5rem] text-[2rem] text-center leading-[40px]">
           Parsa Shaabani portfolio
@@ -106,7 +142,9 @@ export default function Home() {
             </p>
 
             <h1 className="font-bold text-xl mb-1 mt-3">❤️ Things I Enjoy</h1>
-            <p className="text-lg">I love building cool, user-friendly digital projects 💻.</p>
+            <p className="text-lg">
+              I love building cool, user-friendly digital projects 💻.
+            </p>
             <p className="text-lg">
               I’m excited by tools like NextJS, React, Python, and Flutter 🚀.
             </p>
@@ -115,7 +153,9 @@ export default function Home() {
               me active and creative.
             </p>
 
-            <h1 className="font-bold text-xl mb-1 mt-3">📚 Skills I’ve Learned</h1>
+            <h1 className="font-bold text-xl mb-1 mt-3">
+              📚 Skills I’ve Learned
+            </h1>
             <p className="text-lg">
               I know how to use JavaScript, Node.js, and Dart to make ideas come
               to life.
@@ -124,11 +164,17 @@ export default function Home() {
               I’ve practiced making websites look great, improving
               behind-the-scenes code, and creating mobile apps.
             </p>
-            <p className="text-lg">I play chess competitively and even won some awards!</p>
+            <p className="text-lg">
+              I play chess competitively and even won some awards!
+            </p>
 
-            <h1 className="font-bold text-xl mb-1 mt-3">🛠️ Projects I’ve Worked On</h1>
+            <h1 className="font-bold text-xl mb-1 mt-3">
+              🛠️ Projects I’ve Worked On
+            </h1>
             <p className="text-lg">Made lively websites using NextJS.</p>
-            <p className="text-lg">Created mobile app prototypes with Flutter.</p>
+            <p className="text-lg">
+              Created mobile app prototypes with Flutter.
+            </p>
             <p className="text-lg">
               Solved challenges in every project with care and imagination ✨.
             </p>
