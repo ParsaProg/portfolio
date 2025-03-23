@@ -41,14 +41,11 @@ export default function Home() {
       }`}
     >
       <Head>
-        {/* Basic Meta Tags */}
         <title>Parsa Shaabani Portfolio</title>
         <meta
           name="description"
           content="Welcome to Parsa Shaabani's portfolio! 🚀 Explore creative projects, coding adventures, and a timeline of achievements. Connect and build something amazing together! 💡"
         />
-
-        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Parsa Shaabani Portfolio" />
         <meta
           property="og:description"
@@ -60,8 +57,6 @@ export default function Home() {
         />
         <meta property="og:url" content="https://www.parsashaabani.ir/" />
         <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Parsa Shaabani Portfolio" />
         <meta
@@ -72,8 +67,6 @@ export default function Home() {
           name="twitter:image"
           content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
         />
-
-        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="z-50 sm:px-0 px-2">
