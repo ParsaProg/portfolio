@@ -96,39 +96,44 @@ export default function Home() {
         <h1 className="font-bold text-3xl mt-3">
           Programmer & Web developer & Software developer
         </h1>
-        <section className=" w-full my-info-section flex items-start justify-start gap-x-[25px] md:mt-10 mt-3 text-justify">
-          <p className="mb-5 text-md">
-            Hey there! I’m{" "}
-            <strong className="text-[#60a5fa]  underline font-[500]">
-              Parsa Shaabani
-            </strong>
-            , a passionate software engineer hailing from the vibrant city of
-            Shiraz, Iran 🌿—a place rich in culture and history that inspires
-            creativity every day. I’m all about building sleek, scalable, and
-            impactful solutions in the digital world. With a strong foundation
-            in software engineering, I thrive on turning ideas into reality
-            using cutting-edge tools and frameworks like NextJS, React,
-            JavaScript, Python, Flutter, Node.js, and Dart 🚀. Whether it’s
-            crafting responsive frontends, optimizing backend systems, or diving
-            into cross-platform mobile dev, I’m your guy! I’m a tech enthusiast
-            at heart 💻, always exploring the latest trends and pushing the
-            boundaries of what’s possible. My toolkit is versatile, and I’m
-            comfortable hopping between languages and frameworks to get the job
-            done. From architecting dynamic web apps with NextJS to prototyping
-            mobile experiences with Flutter, I bring precision, creativity, and
-            a problem-solving mindset to every project I tackle. Beyond the
-            code, I’m a bit of an adrenaline junkie and strategy nerd. I’m
-            obsessed with mountaineering ⛰️—there’s nothing like conquering a
-            peak to clear the mind and spark inspiration. On the flip side, I’m
-            a chess aficionado ♟️ with a competitive edge (and a few trophies to
-            prove it!). I’ve also got a love for basketball 🏀, where I channel
-            my teamwork and energy into every game. Sports keep me grounded,
-            while coding keeps me dreaming big. I’m driven by challenges—whether
-            it’s debugging a tricky codebase, outsmarting an opponent on the
-            chessboard, or scaling a mountain. If you’re looking for someone who
-            blends technical expertise with a zest for life, let’s connect and
-            build something amazing together! ✨
-          </p>
+        <section className=" w-full my-info-section flex items-start justify-start gap-x-[25px] md:mt-10 mt-3 text-left">
+          <div>
+            <h1 className="font-bold text-xl mb-1">🌟 Who I Am</h1>
+            <p className="text-lg">
+              Hey! I’m Parsa Shaabani, a passionate software engineer from
+              Shiraz, Iran 🌿—a city rich with culture and history that inspires
+              me every day.
+            </p>
+
+            <h1 className="font-bold text-xl mb-1 mt-3">❤️ Things I Enjoy</h1>
+            <p className="text-lg">I love building cool, user-friendly digital projects 💻.</p>
+            <p className="text-lg">
+              I’m excited by tools like NextJS, React, Python, and Flutter 🚀.
+            </p>
+            <p className="text-lg">
+              I’m into mountaineering ⛰️, chess ♟️, and basketball 🏀—they keep
+              me active and creative.
+            </p>
+
+            <h1 className="font-bold text-xl mb-1 mt-3">📚 Skills I’ve Learned</h1>
+            <p className="text-lg">
+              I know how to use JavaScript, Node.js, and Dart to make ideas come
+              to life.
+            </p>
+            <p className="text-lg">
+              I’ve practiced making websites look great, improving
+              behind-the-scenes code, and creating mobile apps.
+            </p>
+            <p className="text-lg">I play chess competitively and even won some awards!</p>
+
+            <h1 className="font-bold text-xl mb-1 mt-3">🛠️ Projects I’ve Worked On</h1>
+            <p className="text-lg">Made lively websites using NextJS.</p>
+            <p className="text-lg">Created mobile app prototypes with Flutter.</p>
+            <p className="text-lg">
+              Solved challenges in every project with care and imagination ✨.
+            </p>
+          </div>
+          <span className="h-[10px]"></span>
           <div
             className={`transition-all duration-200 relative ${
               imageIndex === 0 ? "image-index-0" : "image-index-1"
