@@ -41,7 +41,7 @@ export default function Home() {
     >
       <section className="z-50 sm:px-0 px-2">
         <h1 className="z-50 font-bold lg:text-[3rem] md:text-[2.5rem] text-[2rem] text-center leading-[40px]">
-          I made this for you
+          Parsa Shaabani portfolio
         </h1>
         <h2
           className={`z-50 mt-3 font-[400] md:text-[1.2rem] text-[1.1rem] text-xl text-center ${
