@@ -11,7 +11,6 @@ import CatImage from "../public/IMG_20241227_163947.jpg";
 import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 import "../styles/homepage_res.css";
 import { MdSportsScore } from "react-icons/md";
-import Head from "next/head";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
