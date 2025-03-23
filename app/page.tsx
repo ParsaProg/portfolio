@@ -12,6 +12,7 @@ import ParsaShaabaniImage from "../public/photo_2025-02-17_21-51-13.jpg";
 import "../styles/homepage_res.css";
 import { MdSportsScore } from "react-icons/md";
 import Head from "next/head";
+import favicon from "./favicon.ico";
 
 export default function Home() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -67,7 +68,7 @@ export default function Home() {
           name="twitter:image"
           content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={favicon.src} />
       </Head>
       <section className="z-50 sm:px-0 px-2">
         <h1 className="z-50 font-bold lg:text-[3rem] md:text-[2.5rem] text-[2rem] text-center leading-[40px]">
