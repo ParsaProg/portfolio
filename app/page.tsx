@@ -40,35 +40,7 @@ export default function Home() {
         theme === "dark" ? "text-white" : "text-black"
       }`}
     >
-      <Head>
-        <title>Parsa Shaabani Portfolio</title>
-        <meta
-          name="description"
-          content="Welcome to Parsa Shaabani's portfolio! 🚀 Explore creative projects, coding adventures, and a timeline of achievements. Connect and build something amazing together! 💡"
-        />
-        <meta property="og:title" content="Parsa Shaabani Portfolio" />
-        <meta
-          property="og:description"
-          content="Welcome to Parsa Shaabani's portfolio! 🚀 Explore creative projects, coding adventures, and a timeline of achievements. Connect and build something amazing together! 💡"
-        />
-        <meta
-          property="og:image"
-          content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
-        />
-        <meta property="og:url" content="https://www.parsashaabani.ir/" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Parsa Shaabani Portfolio" />
-        <meta
-          name="twitter:description"
-          content="Welcome to Parsa Shaabani's portfolio! 🚀 Explore creative projects, coding adventures, and a timeline of achievements. Connect and build something amazing together! 💡"
-        />
-        <meta
-          name="twitter:image"
-          content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      
       <section className="z-50 sm:px-0 px-2">
         <h1 className="z-50 font-bold lg:text-[3rem] md:text-[2.5rem] text-[2rem] text-center leading-[40px]">
           Parsa Shaabani portfolio
