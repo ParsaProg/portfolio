@@ -33,7 +33,7 @@ export default function RootLayout({
         <title>پارسا شعبانی | Parsa Shaabani - تخصص در برنامه‌نویسی</title>
         <meta
           name="description"
-          content="پارسا شعبانی (Parsa Shaabani) متخصص در [زمینه کاری شما] با سابقه درخشان در فرانت‌اند - اطلاعات تماس و نمونه کارها"
+          content="پارسا شعبانی (Parsa Shaabani) متخصص در برنامه‌نویسی و فرانت‌اند با سابقه درخشان در فرانت‌اند - اطلاعات تماس و نمونه کارها"
         />
         {/* Basic Meta Tags */}
         <meta
