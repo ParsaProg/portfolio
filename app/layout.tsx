@@ -30,8 +30,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
-        <title>پارسا شعبانی | Parsa Shaabani - تخصص در برنامه‌نویسی</title>
+        <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        ّ
         <meta
           name="description"
           content="پارسا شعبانی (Parsa Shaabani) متخصص در برنامه‌نویسی و فرانت‌اند با سابقه درخشان در فرانت‌اند - اطلاعات تماس و نمونه کارها"
@@ -41,7 +56,6 @@ export default function RootLayout({
           name="description"
           content="Welcome to Parsa Shaabani's portfolio! 🚀 Explore creative projects, coding adventures, and a timeline of achievements. Connect and build something amazing together! 💡"
         />
-
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Parsa Shaabani Portfolio" />
         <meta
@@ -54,7 +68,6 @@ export default function RootLayout({
         />
         <meta property="og:url" content="https://www.parsashaabani.ir/" />
         <meta property="og:type" content="website" />
-
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Parsa Shaabani Portfolio" />
@@ -66,7 +79,6 @@ export default function RootLayout({
           name="twitter:image"
           content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
         />
-
         {/* Favicon */}
         <link rel="icon" href={favicon.src} />
       </head>
