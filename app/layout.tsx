@@ -30,6 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href={favicon.src} type="image/x-icon" />
+        <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
         <title>پارسا شعبانی | Parsa Shaabani - تخصص در برنامه‌نویسی</title>
         <meta
           name="description"
