@@ -80,7 +80,12 @@ export default function RootLayout({
           content="https://github.com/ParsaProg/tecama_images/blob/main/IMG_20241227_163947.jpg?raw=true"
         />
         {/* Favicon */}
-        <link rel="icon" href={favicon.src} />
+        <title>پارسا شعبانی | برنامه‌نویس حرفه‌ای و توسعه‌دهنده وب</title>
+        <meta
+          name="description"
+          content="پارسا شعبانی - متخصص برنامه‌نویسی با سابقه درخشان در توسعه وب و نرم‌افزار. نمونه کارها و اطلاعات تماس."
+        />
+        <meta property="og:locale" content="fa_IR" />
       </head>
       <body className={geist.className}>
         <ThemeProvider>
