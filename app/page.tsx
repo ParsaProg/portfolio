@@ -191,7 +191,7 @@ export default function Home() {
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="absolute w-full main-image-index-0 rounded-lg"
-                  alt="parsashaabani"
+                  alt="'parsashaabani.ir', 'پارسا شعبانی', 'Parsa Shaabani'"
                   src={ParsaShaabaniImage.src}
                 />
               )}
