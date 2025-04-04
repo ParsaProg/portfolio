@@ -17,6 +17,7 @@ const geist = Geist({
 
 // Define metadata using the metadata API
 export const metadata: Metadata = {
+  icons: favicon.src,
   title: "Parsa Shaabani Portfolio",
   description:
     "Welcome to Parsa Shaabani's portfolio! 🚀 Explore creative projects, coding adventures, and a timeline of achievements. Connect and build something amazing together! 💡",
